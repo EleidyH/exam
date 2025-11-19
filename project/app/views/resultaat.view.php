@@ -35,5 +35,4 @@ require_once BASE_PATH . '/app/views/templates/header.php';?>
     <?php endif; ?>
 </div>
 
-<?php require_once BASE_PATH . 'app/view/templates/footer.php'; ?>
- 
+<?php require_once BASE_PATH . '\app\views\templates\footer.php'; ?> 

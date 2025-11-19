@@ -1,5 +1,6 @@
 <?php
 // Include header
+define('BASE_PATH', dirname(__DIR__)); 
 require_once BASE_PATH . '/app/views/templates/header.php';
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 // app/views/stem.view.php
 require_once BASE_PATH . '/app/views/templates/header.php';?>
-<h1>Stem op Verkiezing</h1>
+<h1>Stem op uw Partij</h1>
 
 <?php if (!empty($message)): ?>
     <p style="color: green;"><?= htmlspecialchars($message) ?></p>
@@ -9,9 +9,9 @@ require_once BASE_PATH . '/app/views/templates/header.php';?>
 
 <div class="main">
     <form action="/stem.php" method="POST">
-        <label for="verkiezing_id">Kies een Verkiezing:</label><br>
+        <label for="verkiezing_id">Kies een Partij:</label><br>
         <select name="verkiezing_id" id="verkiezing_id" onchange="this.form.submit()">
-            <option value="">Selecteer Verkiezing</option>
+            <option value="">Selecteer Partij</option>
             <?php foreach ($verkiezingen as $v): ?>
                 <option value="<?= $v['id'] ?>" <?= (isset($_POST['verkiezing_id']) && $_POST['verkiezing_id'] == $v['id']) ? 'selected' : '' ?>>
                     <?= htmlspecialchars($v['naam']) ?>
@@ -33,4 +33,4 @@ require_once BASE_PATH . '/app/views/templates/header.php';?>
     </form>
 </div>
 
-<?php require_once BASE_PATH . 'app/view/templates/footer.php'; ?>
+<?php require_once BASE_PATH . '\app\views\templates\footer.php'; ?>

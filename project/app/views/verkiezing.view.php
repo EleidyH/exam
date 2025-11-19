@@ -1,16 +1,16 @@
 <?php
 // app/views/verkiezing.view.php
 require_once BASE_PATH . '/app/views/templates/header.php';?>
-<h1>Verkiezing Beheren</h1>
+<h1>Partij Beheren</h1>
 
 <?php if (!empty($message)): ?>
     <p style="color: green;"><?= htmlspecialchars($message) ?></p>
 <?php endif; ?>
 
 <div class="main">
-    <h2>Nieuwe Verkiezing Toevoegen</h2>
+    <h2>Nieuwe Partij Toevoegen</h2>
     <form action="/verkiezing.php" method="POST">
-        <label for="naam">Verkiezing Naam:</label><br>
+        <label for="naam">Partij Naam:</label><br>
         <input type="text" id="naam" name="naam" required><br>
 
         <label for="datum">Datum:</label><br>
@@ -24,9 +24,9 @@ require_once BASE_PATH . '/app/views/templates/header.php';?>
 
     <hr><hr>
 
-    <h2>Kandidaten Toevoegen aan Bestaande Verkiezing</h2>
+    <h2>Kandidaten Toevoegen aan Bestaande Partij</h2>
     <form action="/verkiezing.php" method="POST">
-        <label for="verkiezing_id">Verkiezing Naam:</label><br>
+        <label for="verkiezing_id">Partij Naam:</label><br>
         <select name="verkiezing_id" id="verkiezing_id" required>
             <?php foreach ($verkiezingen as $v): ?>
                 <option value="<?= $v['id'] ?>"><?= htmlspecialchars($v['naam']) ?></option>
@@ -44,4 +44,4 @@ require_once BASE_PATH . '/app/views/templates/header.php';?>
     </form>
 </div>
 
-<?php require_once BASE_PATH . 'app/view/templates/footer.php'; ?>
+<?php require_once BASE_PATH . '\app\views\templates\footer.php'; ?>
