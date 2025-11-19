@@ -17,12 +17,15 @@ body{
 nav{
     min-height: 30%;
     background-color: #51845D;
+    width: 100%;
+    padding: 10px 0;
 }
         
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
         
 nav ul li {
@@ -51,11 +54,12 @@ nav ul li a:hover {
     transition: transform 0.2s;
     width: 400px;
     text-align: center;
+    margin-top: 20px;
 }
 
-input {
+input, select, textarea {
     width: 50%;
-    margin-bottom: -20px;
+    margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -77,4 +81,17 @@ button {
 
 button:hover{
     background-color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
